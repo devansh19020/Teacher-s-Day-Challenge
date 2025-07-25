@@ -4,7 +4,7 @@ You can return the answer in any order.*/
 
 import java.util.HashMap;
 
-public class Solution{
+class Solution{
     public int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();
         int[] res = new int[2];
