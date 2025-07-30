@@ -4,20 +4,20 @@ A binary tree's maximum depth is the number of nodes along the longest path from
 */
 
 
-public class TreeNode {
+class MaxDepthTree {
     int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode() {}
-    TreeNode(int val) { this.val = val; }
-    TreeNode(int val, TreeNode left, TreeNode right) {
+    MaxDepthTree left;
+    MaxDepthTree right;
+    MaxDepthTree() {}
+    MaxDepthTree(int val) { this.val = val; }
+    MaxDepthTree(int val, MaxDepthTree left, MaxDepthTree right) {
         this.val = val;
         this.left = left;
         this.right = right;
     }
 }
 class Solution {
-    public int maxDepth(TreeNode root) {
+    public int maxDepth(MaxDepthTree root) {
         if(root == null) return 0;
         return Math.max(maxDepth(root.right), maxDepth(root.left)) + 1;
     }

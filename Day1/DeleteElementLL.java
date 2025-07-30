@@ -1,18 +1,18 @@
 /*Given the head of a linked list and an integer val, remove all the nodes of the linked list that has Node.val == val, and return the new head.*/
 
-public class ListNode {
+class DeleteElementLL {
     int val;
-    ListNode next;
-    ListNode() {}
-    ListNode(int val) { this.val = val; }
-    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+    DeleteElementLL next;
+    DeleteElementLL() {}
+    DeleteElementLL(int val) { this.val = val; }
+    DeleteElementLL(int val, DeleteElementLL next) { this.val = val; this.next = next; }
 }
 
 class Solution {
-    public ListNode removeElements(ListNode head, int val) {
+    public DeleteElementLL removeElements(DeleteElementLL head, int val) {
         while(head != null && head.val == val) head = head.next;
         if(head == null) return head;
-        ListNode temp = head;
+        DeleteElementLL temp = head;
         while(temp.next != null){
             if(temp.next.val == val) temp.next = temp.next.next;
             else temp = temp.next;
