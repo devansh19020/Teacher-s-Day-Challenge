@@ -1,0 +1,16 @@
+/* Valera the Horse is going to the party with friends. He has been following the fashion trends for a while, and he knows that it is very popular to wear all horseshoes of different color. Valera has got four horseshoes left from the last year, but maybe some of them have the same color. In this case he needs to go to the store and buy some few more horseshoes, not to lose face in front of his stylish comrades.
+Fortunately, the store sells horseshoes of all colors under the sun and Valera has enough money to buy any four of them. However, in order to save the money, he would like to spend as little money as possible, so you need to help Valera and determine what is the minimum number of horseshoes he needs to buy to wear four horseshoes of different colors to a party. */
+
+import java.util.HashSet;
+import java.util.Scanner;
+
+public class Horshoes {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        HashSet<Integer> set = new HashSet<>();
+        for(int i = 0; i < 4; i++) {
+            set.add(sc.nextInt());
+        }
+        System.out.println(4 - set.size());
+    }
+}
